@@ -136,15 +136,6 @@ for table in table_block:
         csvYr = row_right[-4:]
         csvMth = convert_mth_strings(csvMth.upper())
         data.append([csvYr, csvMth, url_right])
-    else:
-        row_right = table.find_all('td')[-3].text.strip()
-        print row_right
-        url_right = 'http://www.ipswichhospital.nhs.uk'+table.find_all('td')[-1].find('a')['href']
-
-        csvMth = row_right[:3]
-        csvYr = row_right[-4:]
-        csvMth = convert_mth_strings(csvMth.upper())
-        data.append([csvYr, csvMth, url_right])
 
 
 #### STORE DATA 1.0
